@@ -2,6 +2,7 @@
 
 namespace Entidades
 {
+    [FirestoreData]
     public class Producto
     {
         /// <summary>

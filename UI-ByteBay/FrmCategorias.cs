@@ -172,7 +172,7 @@ namespace UI_ByteBay
         /// <returns>PictureBox con la imagen del producto.</returns>
         private Panel CrearPanelProducto(Producto producto)
         {
-            var panel = new Panel { Width = 200, Height = 300 };
+            var panel = new Panel { Width = 300, Height = 300 };
             var picture = CrearPictureBoxProducto(producto);
             var labelNombre = CrearLabelNombreProducto(producto);
             var labelPrecio = CrearLabelPrecioProducto(producto);
@@ -216,6 +216,7 @@ namespace UI_ByteBay
             {
                 picture.Load(imageUrl);
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar la imagen: " + ex.Message);
@@ -232,12 +233,15 @@ namespace UI_ByteBay
         private Label CrearLabelNombreProducto(Producto producto)
         {
             var nombre = producto.Nombre;
+            var colorTexto = Color.FromArgb(20, 25, 25);
+
             var labelNombre = new Label
             {
                 Text = nombre,
-                ForeColor = Color.White,
+                ForeColor = colorTexto,
                 Location = new Point(75, 170),
-                Font = new Font("Segoe UI", 12, FontStyle.Bold)
+                Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                AutoSize = true
             };
 
             return labelNombre;
@@ -251,12 +255,15 @@ namespace UI_ByteBay
         private Label CrearLabelPrecioProducto(Producto producto)
         {
             var precio = producto.Precio;
+            var colorTexto = Color.FromArgb(20, 25, 25);
+
             var labelPrecio = new Label
             {
                 Text = precio + " $",
-                ForeColor = Color.White,
+                ForeColor = colorTexto,
                 Location = new Point(75, 190),
-                Font = new Font("Segoe UI", 12, FontStyle.Bold)
+                Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                AutoSize = true
             };
 
             return labelPrecio;

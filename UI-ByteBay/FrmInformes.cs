@@ -176,6 +176,7 @@ namespace UI_ByteBay
         private SeriesCollection CrearSeries(Dictionary<string, int> datosEstadisticos)
         {
             var series = new SeriesCollection();
+            var random = new Random();
 
             foreach (var dato in datosEstadisticos)
             {
@@ -183,7 +184,7 @@ namespace UI_ByteBay
                 {
                     Title = dato.Key,
                     Values = new ChartValues<int> { dato.Value },
-                    Fill = System.Windows.Media.Brushes.Green  // Cambiar el color de la barra según tus preferencias
+                    Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb((byte)random.Next(256), (byte)random.Next(256), (byte)random.Next(256)))
                 };
 
                 barra.DataLabels = true;
@@ -194,6 +195,7 @@ namespace UI_ByteBay
 
             return series;
         }
+
 
         /// <summary>
         /// Configurar las propiedades del gráfico estadístico.

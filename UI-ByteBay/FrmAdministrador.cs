@@ -101,8 +101,6 @@ namespace UI_ByteBay.Forms
         /// <summary>
         /// Prepara los componentes del formulario para la administración de usuarios.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private async void btnGestionProductos_Click(object sender, EventArgs e)
         {
             lblEstoyAdministrando.Text = "Usted se encuentra administrando Productos";
@@ -187,11 +185,6 @@ namespace UI_ByteBay.Forms
         /// <summary>
         /// Configura la visibilidad de los componentes del formulario.
         /// </summary>
-        /// <param name="visibleUno"></param>
-        /// <param name="visibleDos"></param>
-        /// <param name="visibleTres"></param>
-        /// <param name="visibleCuatro"></param>
-        /// <param name="visibleCinco"></param>
         private void ConfigurarVisibilidadComponentes(bool visibleUno, bool visibleDos, bool visibleTres, bool visibleCuatro, bool visibleCinco)
         {
             lblCampoUno.Visible = visibleUno;
@@ -221,8 +214,6 @@ namespace UI_ByteBay.Forms
         /// <summary>
         /// Evento de clic en el botón "Agregar". Crea un usuario o un producto de acuerdo a la entidad actual.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private async void btnAgregar_Click(object sender, EventArgs e)
         {
             switch (entidadActual)
@@ -253,8 +244,6 @@ namespace UI_ByteBay.Forms
         /// <summary>
         /// Evento de clic en el botón "Modificar". Modifica un usuario o un producto de acuerdo a la entidad actual.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private async void btnModificar_Click(object sender, EventArgs e)
         {
             if (dgvPrincipal.SelectedCells.Count > 0)
@@ -277,8 +266,6 @@ namespace UI_ByteBay.Forms
         /// <summary>
         /// Evento de clic en el botón "Eliminar". Elimina un usuario o un producto de acuerdo a la entidad actual.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private async void btnEliminar_Click(object sender, EventArgs e)
         {
             switch (entidadActual)
