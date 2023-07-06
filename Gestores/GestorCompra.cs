@@ -20,7 +20,12 @@ namespace Gestores
             var productosEnCarrito = CarritoDeCompras.Productos;
             foreach (var producto in productosEnCarrito)
             {
-                await _gestorProducto.DisminuirStockProductoAsync(producto.Nombre, 1);
+                var resultado = await _gestorProducto.DisminuirStockProductoAsync(producto.Nombre, 1);
+
+                if(!resultado)
+                {
+                    return false;
+                }
             }
             CarritoDeCompras.LimpiarCarrito();
             return true;

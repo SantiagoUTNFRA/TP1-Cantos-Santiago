@@ -57,4 +57,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>¡Bienvenido a nuestra tienda de hardware! Aquí encontrarás todo lo que necesitas para potenciar, 
+tu experiencia informática al máximo.
+Permíteme presentarte algunas de las increíbles características que ofrecemos en nuestra aplicación:</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Explora nuestra amplia gama de productos: Sumérgete en el fascinante mundo del hardware de PC y descubre una selección completa de componentes de alta calidad. Desde potentes procesadores hasta tarjetas gráficas de última generación, tenemos todo lo que necesitas para construir la computadora de tus sueños.</value>
+  </data>
 </root>

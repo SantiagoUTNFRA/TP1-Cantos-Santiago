@@ -1,5 +1,6 @@
 ﻿using Entidades;
 using Firestore;
+using System.Windows;
 
 namespace Gestores
 {
@@ -25,14 +26,14 @@ namespace Gestores
         /// </summary>
         /// <param name="id">Id del producto a ser eliminado</param>
         /// <returns></returns>
-        public async Task EliminarProducto(string id) => await Eliminar(id.ToLower());
+        public async Task EliminarProducto(string id) => await Eliminar(id);
 
         /// <summary>
         /// Obtiene un producto de la base de datos
         /// </summary>
         /// <param name="id">Id del producto a ser obtenido</param>
         /// <returns></returns>
-        public async Task<Producto> ObtenerProducto(string id) => await Obtener(id.ToLower());
+        public async Task<Producto> ObtenerProducto(string id) => await Obtener(id);
 
         /// <summary>
         /// Obtiene todos los productos de la base de datos
@@ -57,19 +58,21 @@ namespace Gestores
         /// <param name="cantidad">Cantidad a disminuir</param>
         /// <returns></returns>
         /// <exception cref="Exception">Lanza una excepción si el stock es insuficiente o el producto no se encuentra.</exception>
-        public async Task DisminuirStockProductoAsync(string id, int cantidad)
+        public async Task<bool> DisminuirStockProductoAsync(string id, int cantidad)
         {
-            var producto = await ObtenerProducto(id.ToLower());
+            var producto = await ObtenerProducto(id);
             if (producto != null)
             {
                 if (producto.Stock >= cantidad)
                 {
                     producto.Stock -= cantidad;
                     await Actualizar(producto, id);
+                    return true;
                 }
                 else
                 {
-                    throw new Exception("Stock insuficiente para el producto con ID: " + id);
+                    MessageBox.Show("No hay Stock suficiente para el producto:" + id);
+                    return false;
                 }
             }
             else
