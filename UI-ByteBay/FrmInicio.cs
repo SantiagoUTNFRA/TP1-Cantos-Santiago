@@ -15,7 +15,7 @@
             this.ControlBox = false;
             ListBoxLogger.Instance.Log("Inicio de la aplicación");
         }
-
+    
         private void ConfigurarFormulario()
         {
             FormBorderStyle = FormBorderStyle.None;

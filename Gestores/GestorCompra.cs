@@ -11,6 +11,10 @@ namespace Gestores
             _gestorProducto = gestorProducto;
         }
 
+        /// <summary>
+        /// Confirma la compra y disminuye el stock de los productos en el carrito.
+        /// </summary>
+        /// <returns>True si pudo confirmar la compra, False si no</returns>
         public async Task<bool> ConfirmarCompraAsync()
         {
             var productosEnCarrito = CarritoDeCompras.Productos;

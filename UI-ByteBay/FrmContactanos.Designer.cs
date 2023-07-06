@@ -149,6 +149,8 @@
             btnGoInstagram.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGoInstagram.UseVisualStyleBackColor = true;
             btnGoInstagram.Click += btnGoInstagram_Click;
+            btnGoInstagram.MouseEnter += btnGoInstagram_MouseEnter;
+            btnGoInstagram.MouseLeave += btnGoInstagram_MouseLeave;
             // 
             // panel4
             // 
@@ -182,6 +184,8 @@
             btnGoReddit.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGoReddit.UseVisualStyleBackColor = true;
             btnGoReddit.Click += btnGoReddit_Click;
+            btnGoReddit.MouseEnter += btnGoReddit_MouseEnter;
+            btnGoReddit.MouseLeave += btnGoReddit_MouseLeave;
             // 
             // btnGoTwitter
             // 
@@ -201,6 +205,8 @@
             btnGoTwitter.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGoTwitter.UseVisualStyleBackColor = true;
             btnGoTwitter.Click += btnGoTwitter_Click;
+            btnGoTwitter.MouseEnter += btnGoTwitter_MouseEnter;
+            btnGoTwitter.MouseLeave += btnGoTwitter_MouseLeave;
             // 
             // btnGoTikTok
             // 
@@ -220,6 +226,8 @@
             btnGoTikTok.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGoTikTok.UseVisualStyleBackColor = true;
             btnGoTikTok.Click += btnGoTikTok_Click;
+            btnGoTikTok.MouseEnter += btnGoTikTok_MouseEnter;
+            btnGoTikTok.MouseLeave += btnGoTikTok_MouseLeave;
             // 
             // btnGoFacebook
             // 
@@ -239,6 +247,8 @@
             btnGoFacebook.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGoFacebook.UseVisualStyleBackColor = true;
             btnGoFacebook.Click += btnGoFacebook_Click;
+            btnGoFacebook.MouseEnter += btnGoFacebook_MouseEnter;
+            btnGoFacebook.MouseLeave += btnGoFacebook_MouseLeave;
             // 
             // btnEnviar
             // 

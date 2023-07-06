@@ -32,6 +32,7 @@
             btnExportPdf = new FontAwesome.Sharp.IconButton();
             btnExportCsv = new FontAwesome.Sharp.IconButton();
             panel2 = new Panel();
+            cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             listBox1 = new ListBox();
             panel1 = new Panel();
             panel4 = new Panel();
@@ -111,6 +112,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(cartesianChart1);
             panel2.Controls.Add(listBox1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 45);
@@ -118,16 +120,23 @@
             panel2.Size = new Size(1145, 511);
             panel2.TabIndex = 26;
             // 
+            // cartesianChart1
+            // 
+            cartesianChart1.Location = new Point(783, 6);
+            cartesianChart1.Name = "cartesianChart1";
+            cartesianChart1.Size = new Size(349, 468);
+            cartesianChart1.TabIndex = 1;
+            cartesianChart1.Text = "cartesianChart1";
+            // 
             // listBox1
             // 
             listBox1.BackColor = Color.Gray;
-            listBox1.Dock = DockStyle.Fill;
             listBox1.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 20;
             listBox1.Location = new Point(0, 0);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(1145, 511);
+            listBox1.Size = new Size(777, 504);
             listBox1.TabIndex = 0;
             // 
             // panel1
@@ -202,5 +211,6 @@
         private Panel panel3;
         private ListBox listBox1;
         private Panel panel4;
+        private LiveCharts.WinForms.CartesianChart cartesianChart1;
     }
 }

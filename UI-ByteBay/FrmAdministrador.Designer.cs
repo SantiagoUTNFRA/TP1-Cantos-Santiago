@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle28 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle29 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle30 = new DataGridViewCellStyle();
             pnlGestionUsuarios = new Panel();
             txtCinco = new TextBox();
             lblCampoCinco = new Label();
@@ -215,6 +215,8 @@
             btnGestionProductos.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGestionProductos.UseVisualStyleBackColor = false;
             btnGestionProductos.Click += btnGestionProductos_Click;
+            btnGestionProductos.MouseEnter += btnGestionProductos_MouseEnter;
+            btnGestionProductos.MouseLeave += btnGestionProductos_MouseLeave;
             // 
             // btnGestiorUsuarios
             // 
@@ -239,6 +241,8 @@
             btnGestiorUsuarios.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnGestiorUsuarios.UseVisualStyleBackColor = false;
             btnGestiorUsuarios.Click += btnGestiorUsuarios_Click;
+            btnGestiorUsuarios.MouseEnter += btnGestiorUsuarios_MouseEnter;
+            btnGestiorUsuarios.MouseLeave += btnGestiorUsuarios_MouseLeave;
             // 
             // btnModificar
             // 
@@ -261,6 +265,8 @@
             btnModificar.TextAlign = ContentAlignment.MiddleRight;
             btnModificar.UseVisualStyleBackColor = true;
             btnModificar.Click += btnModificar_Click;
+            btnModificar.MouseEnter += btnModificar_MouseEnter;
+            btnModificar.MouseLeave += btnModificar_MouseLeave;
             // 
             // btnAgregar
             // 
@@ -283,6 +289,8 @@
             btnAgregar.TextAlign = ContentAlignment.MiddleRight;
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
+            btnAgregar.MouseEnter += btnAgregar_MouseEnter;
+            btnAgregar.MouseLeave += btnAgregar_MouseLeave;
             // 
             // btnEliminar
             // 
@@ -305,39 +313,41 @@
             btnEliminar.TextAlign = ContentAlignment.MiddleRight;
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click;
+            btnEliminar.MouseEnter += btnEliminar_MouseEnter;
+            btnEliminar.MouseLeave += btnEliminar_MouseLeave;
             // 
             // dgvPrincipal
             // 
             dgvPrincipal.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvPrincipal.BackgroundColor = Color.Gray;
             dgvPrincipal.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.DimGray;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.ControlDark;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvPrincipal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle28.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = Color.DimGray;
+            dataGridViewCellStyle28.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle28.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = SystemColors.ControlDark;
+            dataGridViewCellStyle28.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle28.WrapMode = DataGridViewTriState.True;
+            dgvPrincipal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             dgvPrincipal.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.Gray;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.ControlDarkDark;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.AppWorkspace;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            dgvPrincipal.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle29.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = Color.Gray;
+            dataGridViewCellStyle29.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle29.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle29.SelectionBackColor = SystemColors.ControlDarkDark;
+            dataGridViewCellStyle29.SelectionForeColor = SystemColors.AppWorkspace;
+            dataGridViewCellStyle29.WrapMode = DataGridViewTriState.False;
+            dgvPrincipal.DefaultCellStyle = dataGridViewCellStyle29;
             dgvPrincipal.Location = new Point(12, 53);
             dgvPrincipal.Name = "dgvPrincipal";
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.Gray;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = Color.DarkGray;
-            dataGridViewCellStyle6.SelectionForeColor = Color.DimGray;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dgvPrincipal.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle30.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = Color.Gray;
+            dataGridViewCellStyle30.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle30.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle30.SelectionBackColor = Color.DarkGray;
+            dataGridViewCellStyle30.SelectionForeColor = Color.DimGray;
+            dataGridViewCellStyle30.WrapMode = DataGridViewTriState.True;
+            dgvPrincipal.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             dgvPrincipal.RowTemplate.Height = 25;
             dgvPrincipal.Size = new Size(869, 456);
             dgvPrincipal.TabIndex = 44;

@@ -6,6 +6,10 @@ namespace Firestore
     {
         private static FirestoreDb _firestoreDB;
 
+        /// <summary>
+        /// Obtiene una instancia única de la base de datos Firestore.
+        /// </summary>
+        /// <returns>Instancia de la base de datos Firestore.</returns>
         public static FirestoreDb ObtenerInstanciaFirestore()
         {
             if (_firestoreDB == null)

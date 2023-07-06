@@ -3,6 +3,9 @@ using Gestores;
 
 namespace UI_ByteBay.Forms
 {
+    /// <summary>
+    /// Representa la interfaz gráfica de usuario (GUI) para mostrar los productos en el carrito de compras.
+    /// </summary>
     public partial class FrmMiCarrito : Form
     {
         public FrmMiCarrito()
@@ -13,6 +16,9 @@ namespace UI_ByteBay.Forms
             CarritoDeCompras.CarritoCambiado += MostrarProductosEnCarrito;
         }
 
+        /// <summary>
+        /// Configura las propiedades del formulario y sus controles para una presentación linda.
+        /// </summary>
         private void ConfigurarFormulario()
         {
             FormBorderStyle = FormBorderStyle.None;
@@ -29,6 +35,9 @@ namespace UI_ByteBay.Forms
             flpProductosCarrito.WrapContents = true;
         }
 
+        /// <summary>
+        /// Se ejecuta cuando se carga el formulario y muestra los productos en el carrito.
+        /// </summary>
         private void FrmMiCarrito_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
@@ -38,9 +47,13 @@ namespace UI_ByteBay.Forms
             MostrarProductosEnCarrito();
         }
 
+        /// <summary>
+        /// Crea un Panel que representa a un Producto para mostrar en la UI.
+        /// </summary>
+        /// <param name="producto">Producto a mostrar.</param>
+        /// <returns>Panel con la información del producto.</returns>
         private Panel CrearPanelProducto(Producto producto)
         {
-            // Cambiamos el diseño del panel para que sea más atractivo
             var panel = new Panel { Width = 195, Height = 270, BorderStyle = BorderStyle.Fixed3D, Margin = new Padding(10) };
 
             var picture = CrearPictureBoxProducto(producto);
@@ -63,6 +76,11 @@ namespace UI_ByteBay.Forms
             return panel;
         }
 
+        /// <summary>
+        /// Crea un PictureBox para mostrar la imagen de un producto.
+        /// </summary>
+        /// <param name="producto">Producto a mostrar.</param>
+        /// <returns>PictureBox con la imagen del producto.</returns>
         private PictureBox CrearPictureBoxProducto(Producto producto)
         {
             var picture = new PictureBox
@@ -85,6 +103,11 @@ namespace UI_ByteBay.Forms
             return picture;
         }
 
+        /// <summary>
+        /// Crea un Label para mostrar el nombre de un producto.
+        /// </summary>
+        /// <param name="producto">Producto a mostrar.</param>
+        /// <returns>Label con el nombre del producto.</returns>
         private Label CrearLabelNombreProducto(Producto producto)
         {
             var nombre = producto.Nombre;
@@ -100,6 +123,11 @@ namespace UI_ByteBay.Forms
             return labelNombre;
         }
 
+        /// <summary>
+        /// Crea un Label para mostrar el precio de un producto.
+        /// </summary>
+        /// <param name="producto">Producto a mostrar.</param>
+        /// <returns>Label con el precio del producto.</returns>
         private Label CrearLabelPrecioProducto(Producto producto)
         {
             var precio = producto.Precio;
@@ -115,6 +143,11 @@ namespace UI_ByteBay.Forms
             return labelPrecio;
         }
 
+        /// <summary>
+        /// Crea un Button para permitir al usuario eliminar un producto del carrito.
+        /// </summary>
+        /// <param name="producto">Producto a eliminar.</param>
+        /// <returns>Button para eliminar el producto.</returns>
         private Button CrearBotonEliminarProducto(Producto producto)
         {
             var button = new Button
@@ -122,7 +155,7 @@ namespace UI_ByteBay.Forms
                 Text = "Eliminar",
                 BackColor = Color.Red,
                 ForeColor = Color.White,
-                Width = 115,  // Ajustamos el ancho del botón
+                Width = 115,  
                 Height = 30,
                 Font = new Font("Segoe UI", 12, FontStyle.Bold)
             };
@@ -138,6 +171,9 @@ namespace UI_ByteBay.Forms
             return button;
         }
 
+        /// <summary>
+        /// Muestra los productos en el carrito en la interfaz de usuario.
+        /// </summary>
         public void MostrarProductosEnCarrito()
         {
             double total = 0.0;
@@ -155,6 +191,9 @@ namespace UI_ByteBay.Forms
             lblTotal.Text = $"Total: {total} $";
         }
 
+        /// <summary>
+        /// Realiza el proceso de pago del carrito actual y muestra el resultado al usuario.
+        /// </summary>
         private async void btnPagar_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Está seguro que desea realizar el pago?", "Confirmar pago", MessageBoxButtons.YesNo);
